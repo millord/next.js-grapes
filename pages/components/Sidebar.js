@@ -20,6 +20,7 @@ export default function Sidebar({description,handleChange, handleSubmit, title,s
      
     
      <TextareaAutosize style={{display:"block", marginTop:5}} value={description} onChange={handleDescription} aria-label="empty textarea" placeholder="Desbribe your site" />
+     <hr/>
      <Button style={{display:"block", marginTop:5, marginBottom:5}} type="submt" variant="contained" color="primary" size="small">
        Apply Changes
       </Button>
@@ -30,6 +31,7 @@ export default function Sidebar({description,handleChange, handleSubmit, title,s
      Go to site builder
       </Button>
      </form>
+     
     </>
   )
 }

@@ -12,7 +12,6 @@ body {
   margin-right: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  background-color: rgb(0, 255, 191);
   font-family: Lato, sans-serif;
 }
 .mySlides {
@@ -81,6 +80,7 @@ body {
 }
 .w3-black {
   background-color: rgb(24, 154, 100);
+  margin-top: 25px;
 }
 @keyframes fadeEffect {
   0% {
