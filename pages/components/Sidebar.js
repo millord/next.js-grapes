@@ -19,7 +19,7 @@ export default function Sidebar({description,handleChange, handleSubmit, title,s
       <TextField size="small" value={title} onChange={handleChange} id="outlined-basic" label="Name your site" variant="outlined" />
      
     
-     <TextareaAutosize style={{display:"block", marginTop:5}} value={description} onChange={handleDescription} aria-label="empty textarea" placeholder="Empty" />
+     <TextareaAutosize style={{display:"block", marginTop:5}} value={description} onChange={handleDescription} aria-label="empty textarea" placeholder="Desbribe your site" />
      <Button style={{display:"block", marginTop:5, marginBottom:5}} type="submt" variant="contained" color="primary" size="small">
        Apply Changes
       </Button>

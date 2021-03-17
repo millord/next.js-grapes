@@ -13,7 +13,7 @@ const App = () => {
   console.log(boilerPlate)
   console.log("data from back", htmlString)
   const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("Describe your site.")
+  const [description, setDescription] = useState("")
   
     console.log("title", title)
 

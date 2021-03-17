@@ -131,8 +131,10 @@ import React, {useState} from 'react'
       <i id="ioazj">We love music
       </i>
     </p>
-    <p className="w3-justify">{description}
-    </p>
+    {/* <p className="w3-justify">{description || "Describe your site"}
+    </p> */}
+    <h5>{description || "Describe your site"}
+    </h5>
     <div className="w3-row w3-padding-32">
       <div className="w3-third">
         <p>Name
