@@ -289,7 +289,7 @@ import React, {useState} from 'react'
 </div>
 
 
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<footer style={{backgroundColor:"##8a97ab"}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity">
   </i>
   <i class="fa fa-instagram w3-hover-opacity">
@@ -302,7 +302,7 @@ import React, {useState} from 'react'
   </i>
   <i class="fa fa-linkedin w3-hover-opacity">
   </i>
-  <iframe frameborder="0" id="iak5oi" src="https://maps.google.com/maps?&z=1&t=q&output=embed"></iframe>
+  
   <p class="w3-medium">Powered by 
     <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
   </p>
