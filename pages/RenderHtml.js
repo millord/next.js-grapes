@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 
 
-  export default function RenderHtml({setBoilerPlate, title, description, theme}) {
+  export default function RenderHtml({setBoilerPlate, title, description, theme, fontType}) {
     
    
 
@@ -142,7 +142,7 @@ import React, {useState} from 'react'
     </div>
   </div>
   <div id="band" className="w3-container w3-content w3-center w3-padding-64">
-    <h2 className="w3-wide">{title || "Name your site"}
+    <h2 className="w3-wide" style={{fontFamily: fontType}}>{title || "Name your site"}
     </h2>
     <p className="w3-opacity">
       <i id="ioazj">We love music
@@ -150,7 +150,7 @@ import React, {useState} from 'react'
     </p>
     {/* <p className="w3-justify">{description || "Describe your site"}
     </p> */}
-    <h5>{description || "Describe your site"}
+    <h5 style={{fontFamily: fontType}}>{description || "Describe your site"}
     </h5>
     <div className="w3-row w3-padding-32">
       <div className="w3-third">
@@ -203,7 +203,7 @@ import React, {useState} from 'react'
  
   <div id="tour" className="w3-black">
     <div id="i0ta4" className="w3-container w3-content w3-padding-64">
-      <h2 className="w3-wide w3-center">TOUR DATES
+      <h2 style={{fontFamily: fontType}} className="w3-wide w3-center">TOUR DATES
       </h2>
       <p className="w3-opacity w3-center">
         <i>Remember to book your tickets!
@@ -268,7 +268,7 @@ import React, {useState} from 'react'
     </div>
   </div>
   <div id="contact" class="w3-container w3-content w3-padding-64">
-    <h2 class="w3-wide w3-center">CONTACT
+    <h2 class="w3-wide w3-center" style={{fontFamily: fontType}}>CONTACT
     </h2>
     <p class="w3-opacity w3-center">
       <i>Fan? Drop a note!

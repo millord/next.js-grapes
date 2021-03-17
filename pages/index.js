@@ -15,6 +15,7 @@ const App = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [theme, setTheme] = useState('')
+  const [fontType, setFontType] = useState('')
   
     console.log("title", title)
 
@@ -42,7 +43,9 @@ const App = () => {
     setTheme(e.target.value)
    }
 
-  
+  function handleChangeFont(e) {
+    setFontType(e.target.value)
+  }
    
   
 
@@ -64,9 +67,9 @@ const App = () => {
   return (
     <>
       {boilerPlate ?  <div className="container"><div className="sidebar">
-        <Sidebar handleChangeTheme={handleChangeTheme} description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div>
+        <Sidebar handleChangeFont={handleChangeFont} fontType={fontType} handleChangeTheme={handleChangeTheme} description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div>
         <div className="main">
-        <RenderHtml description={description} theme={theme} title={title} setBoilerPlate={setBoilerPlate}/></div></div> 
+        <RenderHtml fontType={fontType} description={description} theme={theme} title={title} setBoilerPlate={setBoilerPlate}/></div></div> 
         :  
         (<><div id="example-editor" /><HorizontalLabelPositionBelowStepper/></>)
       
