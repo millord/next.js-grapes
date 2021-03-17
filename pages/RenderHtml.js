@@ -125,7 +125,7 @@ import React, {useState} from 'react'
     </div>
   </div>
   <div id="band" className="w3-container w3-content w3-center w3-padding-64">
-    <h2 className="w3-wide">{title}
+    <h2 className="w3-wide">{title || "Name your site"}
     </h2>
     <p className="w3-opacity">
       <i id="ioazj">We love music

@@ -1,10 +1,10 @@
 // import '../styles/globals.css'
 
 import 'grapesjs/dist/css/grapes.min.css';
-import "./index.css"
+
 import "./styles.css"
 
-
+import "./index.css"
 
 
 

@@ -12,13 +12,9 @@ const App = () => {
   const [htmlString, setHtmlString] = useState('')
   console.log(boilerPlate)
   console.log("data from back", htmlString)
-  const [title, setTitle] = useState("My Site Title")
-  const [description, setDescription] = useState("The Description of your site here.")
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("Describe your site.")
   
- 
-  
-   
-    
     console.log("title", title)
 
      function handleSubmit(e){
@@ -58,9 +54,12 @@ const App = () => {
 
   return (
     <>
-    
-  
-      {boilerPlate ?  <div className="container"><div className="sidebar"><Sidebar description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div><div className="main"><RenderHtml description={description} title={title} setBoilerPlate={setBoilerPlate}/></div></div> :  (<><div id="example-editor" /><HorizontalLabelPositionBelowStepper/></>)
+      {boilerPlate ?  <div className="container"><div className="sidebar">
+        <Sidebar description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div>
+        <div className="main">
+        <RenderHtml description={description} title={title} setBoilerPlate={setBoilerPlate}/></div></div> 
+        :  
+        (<><div id="example-editor" /><HorizontalLabelPositionBelowStepper/></>)
       
       }
     </>
