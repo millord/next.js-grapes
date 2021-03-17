@@ -289,7 +289,7 @@ import React, {useState} from 'react'
 </div>
 
 
-<footer style={{backgroundColor:"##8a97ab"}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
+<footer style={{backgroundColor:"#8a97ab"}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity">
   </i>
   <i class="fa fa-instagram w3-hover-opacity">
