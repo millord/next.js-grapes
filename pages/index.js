@@ -14,6 +14,7 @@ const App = () => {
   console.log("data from back", htmlString)
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
+  const [theme, setTheme] = useState('')
   
     console.log("title", title)
 
@@ -37,6 +38,14 @@ const App = () => {
      setDescription(e.target.value)
    }
 
+  function handleChangeTheme(e) {
+    setTheme(e.target.value)
+   }
+
+  
+   
+  
+
  
   useEffect(() => {
       const grapesjs = require('grapesjs') 
@@ -55,9 +64,9 @@ const App = () => {
   return (
     <>
       {boilerPlate ?  <div className="container"><div className="sidebar">
-        <Sidebar description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div>
+        <Sidebar handleChangeTheme={handleChangeTheme} description={description} handleDescription={handleDescription} handleSubmit={handleSubmit} setBoilerPlate={setBoilerPlate} title={title}  handleChange={handleChange} /></div>
         <div className="main">
-        <RenderHtml description={description} title={title} setBoilerPlate={setBoilerPlate}/></div></div> 
+        <RenderHtml description={description} theme={theme} title={title} setBoilerPlate={setBoilerPlate}/></div></div> 
         :  
         (<><div id="example-editor" /><HorizontalLabelPositionBelowStepper/></>)
       

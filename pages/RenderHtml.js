@@ -2,13 +2,30 @@ import React, {useState} from 'react'
 
 
 
-  export default function RenderHtml({setBoilerPlate, title, description}) {
-    
+  export default function RenderHtml({setBoilerPlate, title, description, theme}) {
     
    
-    
 
-  
+   function themeColor(theme) {
+    if(theme == "purple"){
+      return {
+        content: "#e639d5",
+        footer: "#332532"
+      }
+    }else if(theme == "orange"){
+     return {
+       content: "#ccd916",
+       footer: "#565748"
+     }  
+   }
+   else {
+     return {
+       content: "#00ffbf",
+       footer: "#8a97ab"
+     }
+   }
+  } 
+  let color = themeColor(theme)
 
    return (
    <>
@@ -22,7 +39,7 @@ import React, {useState} from 'react'
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-<div className="">
+<div className="" >
   <div className="w3-bar w3-black w3-card">
     <a href="javascript:void(0)" onClick="myFunction()" title="Toggle Navigation Menu" className="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"><i className="fa fa-bars">
       </i></a>
@@ -51,7 +68,7 @@ import React, {useState} from 'react'
   <a href="#" onClick="myFunction()" className="w3-bar-item w3-button w3-padding-large">MERCH</a>
 </div>
 
-<div id="icb6y" className="w3-content">
+<div id="icb6y" className="w3-content" style={{backgroundColor: color.content}}>
   
   <div className="mySlides w3-display-container w3-center">
     <img src="/w3images/la.jpg" id="i5fof"/>
@@ -289,7 +306,7 @@ import React, {useState} from 'react'
 </div>
 
 
-<footer style={{backgroundColor:"#8a97ab"}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
+<footer style={{backgroundColor:color.footer}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity">
   </i>
   <i class="fa fa-instagram w3-hover-opacity">

@@ -2,12 +2,14 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Button from '@material-ui/core/Button';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 
 
 
-export default function Sidebar({description,handleChange, handleSubmit, title,setBoilerPlate, handleDescription}) {
+export default function Sidebar({theme, handleChangeTheme, description,handleChange, handleSubmit, title,setBoilerPlate, handleDescription}) {
   
   return (
     <>
@@ -21,7 +23,21 @@ export default function Sidebar({description,handleChange, handleSubmit, title,s
     
      <TextareaAutosize style={{display:"block", marginTop:5}} value={description} onChange={handleDescription} aria-label="empty textarea" placeholder="Desbribe your site" />
      <hr/>
-     <Button style={{display:"block", marginTop:5, marginBottom:5}} type="submt" variant="contained" color="primary" size="small">
+     <p>Pick a theme</p>
+     <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={theme}
+          onChange={handleChangeTheme}
+        >
+          <MenuItem value={"orange"}>Orange</MenuItem>
+          <MenuItem value={"purple"}>Purple</MenuItem>
+         
+        </Select>
+    
+   
+     <hr/>
+     <Button style={{display:"b lock", marginTop:5, marginBottom:5}} type="submt" variant="contained" color="primary" size="small">
        Apply Changes
       </Button>
      </div>
