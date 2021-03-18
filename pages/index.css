@@ -23,7 +23,7 @@ code {
 
 .gjs-one-bg {
   background-color: rgb(241, 234, 234);
-  font-size: large;
+  font-size: 14px;
   color: black;
 }
 .gjs-block-label {
