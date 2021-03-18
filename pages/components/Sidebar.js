@@ -35,7 +35,7 @@ export default function Sidebar({handleChangeFont, fontType, theme, handleChange
           onChange={handleChangeTheme}
           
         >
-          <MenuItem value={"orange"}>Orange</MenuItem>
+          <MenuItem value={"yellow"}>Orange</MenuItem>
           <MenuItem value={"purple"}>Purple</MenuItem>
         </Select>
     

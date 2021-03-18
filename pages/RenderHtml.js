@@ -10,22 +10,43 @@ import React, {useState} from 'react'
     if(theme == "purple"){
       return {
         content: "#e639d5",
-        footer: "#332532"
+        footer: "#332532",
+        buttonStyle: {
+          borderRadius: 50,
+          border:"solid",
+          backgroundColor:"purple",
+          class: ""
+        }
       }
-    }else if(theme == "orange"){
+    }else if(theme == "yellow"){
      return {
        content: "#ccd916",
-       footer: "#565748"
+       footer: "#565748",
+       buttonStyle: {
+        borderRadius: 50,
+        border:"solid",
+        backgroundColor:"yellow",
+        class: ""
+      }
      }  
    }
    else {
      return {
        content: "#00ffbf",
-       footer: "#8a97ab"
+       footer: "#8a97ab",
+       buttonStyle: {
+        borderRadius: null,
+        border:"",
+        backgroundColor:"",
+        class: "w3-black"
+      }
      }
    }
   } 
   let color = themeColor(theme)
+
+  
+
 
    return (
    <>
@@ -233,7 +254,7 @@ import React, {useState} from 'react'
             </p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.
             </p>
-            <button onClick="document.getElementById('ticketModal').style.display='block'" className="w3-button w3-black w3-margin-bottom">Buy Tickets</button>
+            <button style={color.buttonStyle} onClick="document.getElementById('ticketModal').style.display='block'" className={`w3-button ${color.buttonStyle.class}  w3-margin-bottom`}>Buy Tickets</button>
           </div>
         </div>
         <div className="w3-third w3-margin-bottom">
@@ -247,7 +268,7 @@ import React, {useState} from 'react'
             </p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.
             </p>
-            <button onClick="document.getElementById('ticketModal').style.display='block'" className="w3-button w3-black w3-margin-bottom">Buy Tickets</button>
+            <button style={color.buttonStyle} onClick="document.getElementById('ticketModal').style.display='block'" className={`w3-button ${color.buttonStyle.class}  w3-margin-bottom`}>Buy Tickets</button>
           </div>
         </div>
         <div className="w3-third w3-margin-bottom">
@@ -261,7 +282,7 @@ import React, {useState} from 'react'
             </p>
             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.
             </p>
-            <button onClick="document.getElementById('ticketModal').style.display='block'" className="w3-button w3-black w3-margin-bottom">Buy Tickets</button>
+            <button style={color.buttonStyle} onClick="document.getElementById('ticketModal').style.display='block'" className={`w3-button ${color.buttonStyle.class}  w3-margin-bottom`}>Buy Tickets</button>
           </div>
         </div>
       </div>
