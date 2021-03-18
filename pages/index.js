@@ -60,6 +60,8 @@ const App = () => {
         plugins: ["gjs-blocks-basic", 'gjs-preset-webpage']
        
       });
+       e.Keymaps.removeAll()
+      // console.log("grapes object",e)
      
   });
   

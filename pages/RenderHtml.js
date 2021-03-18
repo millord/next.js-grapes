@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Link from 'next/link'
 
 
 
@@ -67,7 +68,8 @@ import React, {useState} from 'react'
     <a href="#" className="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#band" className="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
     <a href="#tour" className="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
-    <a href="#contact" className="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="/contact" className="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    {/* <Link href="/contact" className="w3-bar-item w3-button w3-padding-large w3-hide-small"><a>CONTACT</a></Link> */}
     <div className="w3-dropdown-hover w3-hide-small">
       <button title="More" className="w3-padding-large w3-button">MORE <i className="fa fa-caret-down">
         </i></button>
