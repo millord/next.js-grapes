@@ -288,37 +288,37 @@ import React, {useState} from 'react'
       </div>
     </div>
   </div>
-  <div id="contact" class="w3-container w3-content w3-padding-64">
-    <h2 class="w3-wide w3-center" style={{fontFamily: fontType}}>CONTACT
+  <div id="contact" className="w3-container w3-content w3-padding-64">
+    <h2 className="w3-wide w3-center" style={{fontFamily: fontType}}>CONTACT
     </h2>
-    <p class="w3-opacity w3-center">
+    <p className="w3-opacity w3-center">
       <i>Fan? Drop a note!
       </i>
     </p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i id="iqfa6u" class="fa fa-map-marker">
+    <div className="w3-row w3-padding-32">
+      <div className="w3-col m6 w3-large w3-margin-bottom">
+        <i id="iqfa6u" className="fa fa-map-marker">
         </i> Chicago, US
         <br/>
-        <i id="iwkvvi" class="fa fa-phone">
+        <i id="iwkvvi" className="fa fa-phone">
         </i> Phone: +00 151515
         <br/>
-        <i id="ii8qfq" class="fa fa-envelope"> 
+        <i id="ii8qfq" className="fa fa-envelope"> 
         </i> Email: mail@mail.com
         <br/>
       </div>
-      <div class="w3-col m6">
+      <div className="w3-col m6">
         <form action="/action_page.php" target="_blank">
-          <div id="i7oe7g" class="w3-row-padding">
-            <div class="w3-half">
-              <input type="text" placeholder="Name" required name="Name" class="w3-input w3-border"/>
+          <div id="i7oe7g" className="w3-row-padding">
+            <div className="w3-half">
+              <input type="text" placeholder="Name" required name="Name" className="w3-input w3-border"/>
             </div>
-            <div class="w3-half">
-              <input type="text" placeholder="Email" required name="Email" class="w3-input w3-border"/>
+            <div className="w3-half">
+              <input type="text" placeholder="Email" required name="Email" className="w3-input w3-border"/>
             </div>
           </div>
-          <input type="text" placeholder="Message" required name="Message" class="w3-input w3-border"/>
-          <button type="submit" class="w3-button w3-black w3-section w3-right">SEND</button>
+          <input type="text" placeholder="Message" required name="Message" className="w3-input w3-border"/>
+          <button type="submit" className="w3-button w3-black w3-section w3-right">SEND</button>
         </form>
       </div>
     </div>
@@ -327,21 +327,21 @@ import React, {useState} from 'react'
 </div>
 
 
-<footer style={{backgroundColor:color.footer}} class="w3-container w3-padding-64 w3-center   w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity">
+<footer style={{backgroundColor:color.footer}} className="w3-container w3-padding-64 w3-center   w3-xlarge">
+  <i className="fa fa-facebook-official w3-hover-opacity">
   </i>
-  <i class="fa fa-instagram w3-hover-opacity">
+  <i className="fa fa-instagram w3-hover-opacity">
   </i>
-  <i class="fa fa-snapchat w3-hover-opacity">
+  <i className="fa fa-snapchat w3-hover-opacity">
   </i>
-  <i class="fa fa-pinterest-p w3-hover-opacity">
+  <i className="fa fa-pinterest-p w3-hover-opacity">
   </i>
-  <i class="fa fa-twitter w3-hover-opacity">
+  <i className="fa fa-twitter w3-hover-opacity">
   </i>
-  <i class="fa fa-linkedin w3-hover-opacity">
+  <i className="fa fa-linkedin w3-hover-opacity">
   </i>
   
-  <p class="w3-medium">Powered by 
+  <p className="w3-medium">Powered by 
     <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
   </p>
 </footer>
