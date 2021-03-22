@@ -8,11 +8,6 @@ export default function RenderHtml({
   theme,
   fontType,
 }) {
-  const [toggleState, setToggleState] = useState(1);
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
-
   function themeColor(theme) {
     if (theme == "purple") {
       return {
@@ -81,15 +76,18 @@ export default function RenderHtml({
             >
               <i className="fa fa-bars"></i>
             </a>
+
             <a href="#" className="w3-bar-item w3-button w3-padding-large">
               HOME
             </a>
+
             <a
               href="#band"
               className="w3-bar-item w3-button w3-padding-large w3-hide-small"
             >
               BAND
             </a>
+
             <a
               href="#tour"
               className="w3-bar-item w3-button w3-padding-large w3-hide-small"
