@@ -6,7 +6,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 
-export default function Sidebar({
+function Sidebar({
   handleChangeFont,
   fontType,
   theme,
@@ -17,6 +17,8 @@ export default function Sidebar({
   title,
   setBoilerPlate,
   handleDescription,
+  handleSubtitle,
+  subtitle,
 }) {
   return (
     <>
@@ -33,6 +35,14 @@ export default function Sidebar({
             onChange={handleChange}
             id="outlined-basic"
             label="Name your site"
+            variant="outlined"
+          />
+          <TextField
+            size="small"
+            value={subtitle}
+            onChange={handleSubtitle}
+            id="outlined-basic"
+            label="Add a subtitle"
             variant="outlined"
           />
 
@@ -100,3 +110,5 @@ export default function Sidebar({
     </>
   );
 }
+
+export default React.memo(Sidebar);

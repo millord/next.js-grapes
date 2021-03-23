@@ -14,6 +14,7 @@ const App = () => {
   const [description, setDescription] = useState("");
   const [theme, setTheme] = useState("");
   const [fontType, setFontType] = useState("");
+  const [subtitle, setSubtitle] = useState("");
 
   console.log("title", title);
 
@@ -45,26 +46,45 @@ const App = () => {
     setFontType(e.target.value);
   }
 
+  function handleSubtitle(e) {
+    setSubtitle(e.target.value);
+  }
+
   useEffect(() => {
     const grapesjs = require("grapesjs");
     const presetWeb = require("grapesjs-preset-webpage");
     const basicBlocks = require("grapesjs-blocks-basic");
     const e = grapesjs.init({
       container: "#example-editor",
+      styleManager: {
+        sectors: [
+          {
+            name: "My Style 1",
+            buildProps: ["width", "min-height"],
+          },
+          {
+            name: "My Style 2",
+            buildProps: ["background-color", "box-shadow"],
+          },
+        ],
+      },
       fromElement: true,
       plugins: ["gjs-blocks-basic", "gjs-preset-webpage"],
     });
     e.Keymaps.removeAll();
-    // console.log("grapes object",e)
+
     // const blockManager = e.BlockManager;
-    // console.log(blockManager)
-    // blockManager.add('h1-block', {
-    //   label: 'Heading',
-    //   content: '<h1>Put your title here</h1>',
-    //   category: 'Basic',
-    //   attributes: {
-    //     title: 'Insert h1 block'
-    //   }
+    // blockManager.add("some-block-id", {
+    //   label: `<div>
+    //       <img src="https://picsum.photos/70/70"/>
+    //       <div class="my-label-block">Label block</div>
+    //     </div>`,
+    //   content: "<div>...</div>",
+    //   render: ({ model, className }) => `<div class="${className}__my-wrap">
+    //       Before label
+    //       ${model.get("label")}
+    //       After label
+    //     </div>`,
     // });
   });
 
@@ -83,6 +103,8 @@ const App = () => {
               setBoilerPlate={setBoilerPlate}
               title={title}
               handleChange={handleChange}
+              handleSubtitle={handleSubtitle}
+              subtitle={subtitle}
             />
           </div>
           <div className="main">
