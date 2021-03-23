@@ -5,6 +5,18 @@ import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+  },
+  input: {
+    display: "none",
+  },
+}));
 
 function Sidebar({
   handleChangeFont,
@@ -20,6 +32,7 @@ function Sidebar({
   handleSubtitle,
   subtitle,
 }) {
+  const classes = useStyles();
   return (
     <>
       <h5>Create your site</h5>
@@ -30,6 +43,7 @@ function Sidebar({
       <form onSubmit={handleSubmit}>
         <div>
           <TextField
+            style={{ display: "block", marginTop: 5 }}
             size="small"
             value={title}
             onChange={handleChange}
@@ -38,6 +52,7 @@ function Sidebar({
             variant="outlined"
           />
           <TextField
+            style={{ display: "block", marginTop: 5 }}
             size="small"
             value={subtitle}
             onChange={handleSubtitle}
@@ -53,6 +68,25 @@ function Sidebar({
             aria-label="empty textarea"
             placeholder="Desbribe your site"
           />
+          <div className={classes.root}>
+            <input
+              accept="image/*"
+              className={classes.input}
+              id="contained-button-file"
+              multiple
+              type="file"
+            />
+            <label htmlFor="contained-button-file">
+              <Button
+                style={{ marginTop: 4, marginLeft: -10 }}
+                variant="contained"
+                color="primary"
+                component="span"
+              >
+                Add an image for you site
+              </Button>
+            </label>
+          </div>
           <hr />
 
           <InputLabel id="demo-simple-select-placeholder-label-label">
