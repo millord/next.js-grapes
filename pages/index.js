@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import HorizontalLabelPositionBelowStepper from "./stepper";
 import RenderHtml from "./RenderHtml";
 import Sidebar from "./components/Sidebar";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 const App = () => {
   const [pluginLoaded, setPluginLoaded] = useState(false);
@@ -15,6 +17,7 @@ const App = () => {
   const [theme, setTheme] = useState("");
   const [fontType, setFontType] = useState("");
   const [subtitle, setSubtitle] = useState("");
+  const [bgImage, setBgImage] = useState([]);
 
   console.log("title", title);
 
@@ -50,6 +53,10 @@ const App = () => {
     setSubtitle(e.target.value);
   }
 
+  function handleBackground(e) {
+    setBgImage("whole event", e);
+  }
+
   useEffect(() => {
     const grapesjs = require("grapesjs");
     const presetWeb = require("grapesjs-preset-webpage");
@@ -70,6 +77,9 @@ const App = () => {
       },
       fromElement: true,
       plugins: ["gjs-blocks-basic", "gjs-preset-webpage"],
+      panels: {
+        defaults: [],
+      },
     });
     e.Keymaps.removeAll();
 
@@ -94,6 +104,8 @@ const App = () => {
         <div className="container">
           <div className="sidebar">
             <Sidebar
+              bgImage={bgImage}
+              handleBackground={handleBackground}
               handleChangeFont={handleChangeFont}
               fontType={fontType}
               handleChangeTheme={handleChangeTheme}
@@ -114,11 +126,34 @@ const App = () => {
               theme={theme}
               title={title}
               setBoilerPlate={setBoilerPlate}
+              subtitle={subtitle}
             />
           </div>
         </div>
       ) : (
         <>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <TextField
+                style={{ display: "block", marginTop: 5 }}
+                size="small"
+                value={title}
+                // onChange={handleChange}
+                id="outlined-basic"
+                label="Name your site"
+                variant="outlined"
+              />{" "}
+              <Button
+                style={{ display: "b lock", marginTop: 5, marginBottom: 5 }}
+                type="submt"
+                variant="contained"
+                color="primary"
+                size="small"
+              >
+                Apply Changes
+              </Button>
+            </div>
+          </form>
           <div id="example-editor" />
           <HorizontalLabelPositionBelowStepper />
         </>

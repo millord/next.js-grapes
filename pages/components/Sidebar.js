@@ -31,8 +31,11 @@ function Sidebar({
   handleDescription,
   handleSubtitle,
   subtitle,
+  bgImage,
+  handleBackground,
 }) {
   const classes = useStyles();
+  console.log("image in sidebar", bgImage);
   return (
     <>
       <h5>Create your site</h5>
@@ -78,6 +81,7 @@ function Sidebar({
             />
             <label htmlFor="contained-button-file">
               <Button
+                onChange={handleBackground}
                 style={{ marginTop: 4, marginLeft: -10 }}
                 variant="contained"
                 color="primary"
@@ -87,6 +91,8 @@ function Sidebar({
               </Button>
             </label>
           </div>
+          <Button onChange={handleBackground}>image</Button>
+
           <hr />
 
           <InputLabel id="demo-simple-select-placeholder-label-label">

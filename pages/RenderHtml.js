@@ -7,6 +7,7 @@ export default function RenderHtml({
   description,
   theme,
   fontType,
+  subtitle,
 }) {
   function themeColor(theme) {
     if (theme == "purple") {
@@ -261,7 +262,7 @@ export default function RenderHtml({
               {title || "Name your site"}
             </h2>
             <p className="w3-opacity">
-              <i id="ioazj">We love music</i>
+              <i id="ioazj">{subtitle || "We love music"}</i>
             </p>
             {/* <p className="w3-justify">{description || "Describe your site"}
     </p> */}
