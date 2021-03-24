@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import Button from "@material-ui/core/Button";
@@ -6,6 +6,8 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import { makeStyles } from "@material-ui/core/styles";
+import Image from "next/image";
+import Gallery from "./Gallery";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,11 +33,11 @@ function Sidebar({
   handleDescription,
   handleSubtitle,
   subtitle,
-  bgImage,
+
   handleBackground,
 }) {
   const classes = useStyles();
-  console.log("image in sidebar", bgImage);
+
   return (
     <>
       <h5>Create your site</h5>
@@ -71,27 +73,32 @@ function Sidebar({
             aria-label="empty textarea"
             placeholder="Desbribe your site"
           />
+
+          <h5>Set your cover image</h5>
+          <p>Click to upload your cover image</p>
           <div className={classes.root}>
-            <input
-              accept="image/*"
-              className={classes.input}
-              id="contained-button-file"
-              multiple
-              type="file"
-            />
-            <label htmlFor="contained-button-file">
-              <Button
-                onChange={handleBackground}
-                style={{ marginTop: 4, marginLeft: -10 }}
-                variant="contained"
-                color="primary"
-                component="span"
-              >
-                Add an image for you site
-              </Button>
-            </label>
+            <form>
+              <input
+                accept="image/*"
+                className={classes.input}
+                id="contained-button-file"
+                multiple
+                type="file"
+              />
+              <label htmlFor="contained-button-file">
+                <Button
+                  onClick={handleBackground}
+                  style={{ marginTop: 4, marginLeft: -10 }}
+                  variant="contained"
+                  color="primary"
+                  component="span"
+                >
+                  Add an image for you site
+                </Button>
+              </label>
+            </form>
+            <Gallery handleBackground={handleBackground} />
           </div>
-          <Button onChange={handleBackground}>image</Button>
 
           <hr />
 
@@ -125,7 +132,7 @@ function Sidebar({
           </Select>
           <hr />
           <Button
-            style={{ display: "b lock", marginTop: 5, marginBottom: 5 }}
+            style={{ display: "b lock", marginTop: 3, marginBottom: 5 }}
             type="submt"
             variant="contained"
             color="primary"
@@ -137,7 +144,7 @@ function Sidebar({
       </form>
       <form>
         <Button
-          style={{ display: "block", marginTop: 5 }}
+          style={{ display: "block", marginTop: 3 }}
           onClick={() => setBoilerPlate(false)}
           type="submt"
           variant="contained"

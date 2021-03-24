@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function RenderHtml({
   setBoilerPlate,
@@ -8,6 +8,7 @@ export default function RenderHtml({
   theme,
   fontType,
   subtitle,
+  bgImage,
 }) {
   function themeColor(theme) {
     if (theme == "purple") {
@@ -45,7 +46,16 @@ export default function RenderHtml({
       };
     }
   }
-  let color = themeColor(theme);
+  const color = themeColor(theme);
+
+  const testImage = (
+    <Image
+      src="/music.jpeg"
+      alt="Picture of the author"
+      width={500}
+      height={500}
+    />
+  );
 
   return (
     <>
@@ -164,7 +174,13 @@ export default function RenderHtml({
         <div
           id="icb6y"
           className="w3-content"
-          style={{ backgroundColor: color.content }}
+          // style={{ backgroundColor: color.content }}
+          // style={{
+          //   backgroundImage: `url(${testImage.props.src})`,
+          // }}
+          style={{
+            backgroundImage: `url(${bgImage})`,
+          }}
         >
           <div className="mySlides w3-display-container w3-center">
             <img src="/w3images/la.jpg" id="i5fof" />
@@ -193,7 +209,6 @@ export default function RenderHtml({
               </p>
             </div>
           </div>
-
           <div id="irbo6v">
             <div role="tablist" className="tab-container"></div>
             <div className="tab-contents">
@@ -293,7 +308,6 @@ export default function RenderHtml({
               </div>
             </div>
           </div>
-
           <div id="ticketModal" className="w3-modal">
             <div className="w3-modal-content w3-animate-top w3-card-4">
               <header className="w3-container w3-teal w3-center w3-padding-32">
@@ -347,7 +361,6 @@ export default function RenderHtml({
               </div>
             </div>
           </div>
-
           <div id="tour" className="w3-black">
             <div id="i0ta4" className="w3-container w3-content w3-padding-64">
               <h2

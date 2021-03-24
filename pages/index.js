@@ -4,6 +4,8 @@ import RenderHtml from "./RenderHtml";
 import Sidebar from "./components/Sidebar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+// import backgroundImage from "../assets/music.jpeg";
+import Image from "next/image";
 
 const App = () => {
   const [pluginLoaded, setPluginLoaded] = useState(false);
@@ -17,7 +19,9 @@ const App = () => {
   const [theme, setTheme] = useState("");
   const [fontType, setFontType] = useState("");
   const [subtitle, setSubtitle] = useState("");
-  const [bgImage, setBgImage] = useState([]);
+  const [bgImage, setBgImage] = useState("");
+
+  // const imagesForBackground = [{ name: "micro", src: backgroundImage }];
 
   console.log("title", title);
 
@@ -36,6 +40,7 @@ const App = () => {
 
   function handleChange(e) {
     setTitle(e.target.value);
+    setBgImage(testImage);
   }
   function handleDescription(e) {
     setDescription(e.target.value);
@@ -53,8 +58,17 @@ const App = () => {
     setSubtitle(e.target.value);
   }
 
+  const testImage = (
+    <Image
+      src="/music.jpeg"
+      alt="Picture of the author"
+      width={500}
+      height={500}
+    />
+  );
+
   function handleBackground(e) {
-    setBgImage("whole event", e);
+    setBgImage(e.target.src);
   }
 
   useEffect(() => {
@@ -121,6 +135,7 @@ const App = () => {
           </div>
           <div className="main">
             <RenderHtml
+              bgImage={bgImage}
               fontType={fontType}
               description={description}
               theme={theme}
