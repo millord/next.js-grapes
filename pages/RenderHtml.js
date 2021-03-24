@@ -174,13 +174,21 @@ export default function RenderHtml({
         <div
           id="icb6y"
           className="w3-content"
-          // style={{ backgroundColor: color.content }}
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundColor: color.content,
+
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+
+            // backgroundAttachment: "fixed",
+          }}
           // style={{
           //   backgroundImage: `url(${testImage.props.src})`,
           // }}
-          style={{
-            backgroundImage: `url(${bgImage})`,
-          }}
+          // style={{
+          //   backgroundImage: `url(${bgImage})`,
+          // }}
         >
           <div className="mySlides w3-display-container w3-center">
             <img src="/w3images/la.jpg" id="i5fof" />
