@@ -31,9 +31,7 @@ function EditorSiteBar({
   title,
   setBoilerPlate,
   handleDescription,
-  handleSubtitle,
   subtitle,
-
   handleBackground,
   editor,
 }) {
@@ -44,9 +42,18 @@ function EditorSiteBar({
   };
 
   const handleEditorChange = (e) => {
-    // console.log(e.target.value);
-    //  const typedByUser = "type something...";
     const cmp = editor.getWrapper().find(".w3-wide")[0];
+    cmp && cmp.components(e.target.value);
+  };
+
+  const handleEditorSubtitle = (e) => {
+    const cmp = editor.getWrapper().find(".w3-opacity")[0];
+    cmp && cmp.components(e.target.value);
+  };
+
+  // implement later
+  const handleEditorDescription = (e) => {
+    const cmp = editor.getWrapper().find("#ioazj")[0];
     cmp && cmp.components(e.target.value);
   };
 
@@ -67,7 +74,7 @@ function EditorSiteBar({
             style={{ display: "block", marginTop: 5 }}
             size="small"
             value={subtitle}
-            onChange={handleSubtitle}
+            onChange={handleEditorSubtitle}
             id="outlined-basic"
             label="Add a subtitle"
             variant="outlined"
@@ -76,7 +83,7 @@ function EditorSiteBar({
           <TextareaAutosize
             style={{ display: "block", marginTop: 5 }}
             value={description}
-            onChange={handleDescription}
+            onChange={handleEditorDescription}
             aria-label="empty textarea"
             placeholder="Desbribe your site"
           />

@@ -289,9 +289,11 @@ export default function RenderHtml({
             </p>
             {/* <p className="w3-justify">{description || "Describe your site"}
     </p> */}
-            <h5 style={{ fontFamily: fontType }}>
-              {description || "Describe your site"}
-            </h5>
+            <div className="w3-DescripionGrapes">
+              <h5 style={{ fontFamily: fontType }}>
+                {description || "Describe your site"}
+              </h5>
+            </div>
             <div className="w3-row w3-padding-32">
               <div className="w3-third">
                 <p>Name</p>
