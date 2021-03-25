@@ -281,7 +281,7 @@ export default function RenderHtml({
             id="band"
             className="w3-container w3-content w3-center w3-padding-64"
           >
-            <h2 className="w3-wide" style={{ fontFamily: fontType }}>
+            <h2 className="w3-wide titleClass" style={{ fontFamily: fontType }}>
               {title || "Name your site"}
             </h2>
             <p className="w3-opacity">

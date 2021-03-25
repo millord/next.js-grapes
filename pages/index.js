@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 // import backgroundImage from "../assets/music.jpeg";
 import Image from "next/image";
+import EditorSiteBar from "./components/EditorSiteBar";
 
 const App = () => {
   const [pluginLoaded, setPluginLoaded] = useState(false);
@@ -72,49 +73,58 @@ const App = () => {
   }
 
   useEffect(() => {
-    const grapesjs = require("grapesjs");
-    const presetWeb = require("grapesjs-preset-webpage");
-    const basicBlocks = require("grapesjs-blocks-basic");
-    const e = grapesjs.init({
-      container: "#example-editor",
-      styleManager: {
-        sectors: [
-          {
-            name: "My Style 1",
-            buildProps: ["width", "min-height"],
-          },
-          {
-            name: "My Style 2",
-            buildProps: ["background-color", "box-shadow"],
-          },
-        ],
-      },
-      fromElement: true,
-      plugins: ["gjs-blocks-basic", "gjs-preset-webpage"],
-      panels: {
-        defaults: [],
-      },
-    });
-    e.Keymaps.removeAll();
+    if (!editor) {
+      const grapesjs = require("grapesjs");
+      const presetWeb = require("grapesjs-preset-webpage");
+      const basicBlocks = require("grapesjs-blocks-basic");
+      const e = grapesjs.init({
+        container: "#example-editor",
+        styleManager: {
+          sectors: [
+            {
+              name: "My Style 1",
+              buildProps: ["width", "min-height"],
+            },
+            {
+              name: "My Style 2",
+              buildProps: ["background-color", "box-shadow"],
+            },
+          ],
+        },
+        fromElement: true,
+        plugins: ["gjs-blocks-basic", "gjs-preset-webpage"],
+        panels: {
+          defaults: [],
+        },
+      });
 
-    // const blockManager = e.BlockManager;
-    // blockManager.add("some-block-id", {
-    //   label: `<div>
-    //       <img src="https://picsum.photos/70/70"/>
-    //       <div class="my-label-block">Label block</div>
-    //     </div>`,
-    //   content: "<div>...</div>",
-    //   render: ({ model, className }) => `<div class="${className}__my-wrap">
-    //       Before label
-    //       ${model.get("label")}
-    //       After label
-    //     </div>`,
-    // });
+      e.Keymaps.removeAll();
+
+      const typedByUser = "type something...";
+      const cmp = e.getWrapper().find(".w3-wide")[0];
+      cmp && cmp.components(typedByUser);
+      setEditor(e);
+      // console.log("component here", cmp);
+
+      // const blockManager = e.BlockManager;
+      // blockManager.add("some-block-id", {
+      //   label: `<div>
+      //       <img src="https://picsum.photos/70/70"/>
+      //       <div class="my-label-block">Label block</div>
+      //     </div>`,
+      //   content: "<div>...</div>",
+      //   render: ({ model, className }) => `<div class="${className}__my-wrap">
+      //       Before label
+      //       ${model.get("label")}
+      //       After label
+      //     </div>`,
+      // });
+    }
   });
 
   return (
     <>
-      {boilerPlate ? (
+      {/* {boilerPlate ? (
         <div className="container">
           <div className="sidebar">
             <Sidebar
@@ -146,33 +156,14 @@ const App = () => {
           </div>
         </div>
       ) : (
-        <>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <TextField
-                style={{ display: "block", marginTop: 5 }}
-                size="small"
-                value={title}
-                // onChange={handleChange}
-                id="outlined-basic"
-                label="Name your site"
-                variant="outlined"
-              />{" "}
-              <Button
-                style={{ display: "b lock", marginTop: 5, marginBottom: 5 }}
-                type="submt"
-                variant="contained"
-                color="primary"
-                size="small"
-              >
-                Apply Changes
-              </Button>
-            </div>
-          </form>
+        <> */}
+      {/* <EditorSiteBar />
           <div id="example-editor" />
           <HorizontalLabelPositionBelowStepper />
         </>
-      )}
+      )} */}
+      <EditorSiteBar />
+      <div id="example-editor" />
     </>
   );
 };
