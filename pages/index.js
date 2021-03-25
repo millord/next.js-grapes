@@ -124,7 +124,7 @@ const App = () => {
 
   return (
     <>
-      {/* {boilerPlate ? (
+      {boilerPlate ? (
         <div className="container">
           <div className="sidebar">
             <Sidebar
@@ -156,16 +156,14 @@ const App = () => {
           </div>
         </div>
       ) : (
-        <> */}
-      {/* <EditorSiteBar />
-          <div id="example-editor" />
-          <HorizontalLabelPositionBelowStepper />
+        <>
+          <div className="editorContainer">
+            <EditorSiteBar editor={editor} />
+            <div id="example-editor" />
+            <HorizontalLabelPositionBelowStepper />
+          </div>
         </>
-      )} */}
-      <div className="editorContainer">
-        <EditorSiteBar editor={editor} />
-        <div id="example-editor" />
-      </div>
+      )}
     </>
   );
 };

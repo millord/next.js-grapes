@@ -8,6 +8,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "next/image";
 import Gallery from "./Gallery";
+import ProgressMobileStepper from "./progressStepper";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -154,6 +155,7 @@ function Sidebar({
           Go to site builder
         </Button>
       </form>
+      <ProgressMobileStepper />
     </>
   );
 }
