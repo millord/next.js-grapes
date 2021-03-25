@@ -99,7 +99,7 @@ const App = () => {
       });
 
       e.Keymaps.removeAll();
-      setEditor(e);
+      // setEditor(e);
       // const typedByUser = "type something...";
       // const cmp = e.getWrapper().find(".w3-wide")[0];
       // cmp && cmp.components(typedByUser);
