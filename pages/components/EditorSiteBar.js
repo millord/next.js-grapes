@@ -87,57 +87,7 @@ function EditorSiteBar({
             aria-label="empty textarea"
             placeholder="Desbribe your site"
           />
-
-          <h5>Set your cover image</h5>
-          <p>Click to upload your cover image</p>
-          <div className={classes.root}>
-            <form>
-              <input
-                accept="image/*"
-                className={classes.input}
-                id="contained-button-file"
-                multiple
-                type="file"
-              />
-              <label htmlFor="contained-button-file">
-                <Button
-                  onClick={handleBackground}
-                  style={{ marginTop: 4, marginLeft: -10 }}
-                  variant="contained"
-                  color="primary"
-                  component="span"
-                >
-                  Add an image for you site
-                </Button>
-              </label>
-            </form>
-            <Gallery handleBackground={handleBackground} />
-          </div>
-
-          <hr />
-
-          <Button
-            style={{ display: "b lock", marginTop: 3, marginBottom: 5 }}
-            type="submt"
-            variant="contained"
-            color="primary"
-            size="small"
-          >
-            Apply Changes
-          </Button>
         </div>
-      </form>
-      <form>
-        <Button
-          style={{ display: "block", marginTop: 3 }}
-          onClick={() => setBoilerPlate(false)}
-          type="submt"
-          variant="contained"
-          color="primary"
-          size="small"
-        >
-          Go to site builder
-        </Button>
       </form>
     </>
   );

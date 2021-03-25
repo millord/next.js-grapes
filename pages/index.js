@@ -162,8 +162,10 @@ const App = () => {
           <HorizontalLabelPositionBelowStepper />
         </>
       )} */}
-      <EditorSiteBar editor={editor} />
-      <div id="example-editor" />
+      <div className="editorContainer">
+        <EditorSiteBar editor={editor} />
+        <div id="example-editor" />
+      </div>
     </>
   );
 };

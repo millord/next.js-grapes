@@ -74,3 +74,7 @@ code {
 .photoContainer {
   border: 1 solid black;
 }
+
+.editorContainer {
+  display: flex;
+}
