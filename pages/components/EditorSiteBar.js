@@ -35,18 +35,30 @@ function EditorSiteBar({
   subtitle,
 
   handleBackground,
+  editor,
 }) {
   const classes = useStyles();
 
+  const handleEditorSubmit = (e) => {
+    console.log("working");
+  };
+
+  const handleEditorChange = (e) => {
+    // console.log(e.target.value);
+    //  const typedByUser = "type something...";
+    const cmp = editor.getWrapper().find(".w3-wide")[0];
+    cmp && cmp.components(e.target.value);
+  };
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleEditorSubmit}>
         <div>
           <TextField
             style={{ display: "block", marginTop: 5 }}
             size="small"
             value={title}
-            onChange={handleChange}
+            onChange={handleEditorChange}
             id="outlined-basic"
             label="Name your site"
             variant="outlined"

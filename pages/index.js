@@ -100,10 +100,10 @@ const App = () => {
 
       e.Keymaps.removeAll();
 
-      const typedByUser = "type something...";
-      const cmp = e.getWrapper().find(".w3-wide")[0];
-      cmp && cmp.components(typedByUser);
-      setEditor(e);
+      // const typedByUser = "type something...";
+      // const cmp = e.getWrapper().find(".w3-wide")[0];
+      // cmp && cmp.components(typedByUser);
+      // setEditor(e);
       // console.log("component here", cmp);
 
       // const blockManager = e.BlockManager;
@@ -162,7 +162,7 @@ const App = () => {
           <HorizontalLabelPositionBelowStepper />
         </>
       )} */}
-      <EditorSiteBar />
+      <EditorSiteBar editor={editor} />
       <div id="example-editor" />
     </>
   );
