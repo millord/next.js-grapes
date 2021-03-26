@@ -74,7 +74,7 @@ function Sidebar({
             placeholder="Desbribe your site"
           />
 
-          <h5>Set your cover image</h5>
+          {/* <h5>Set your cover image</h5>
           <p>Click to upload your cover image</p>
           <div className={classes.root}>
             <form>
@@ -98,7 +98,7 @@ function Sidebar({
               </label>
             </form>
             <Gallery handleBackground={handleBackground} />
-          </div>
+          </div> */}
 
           <hr />
 
@@ -154,7 +154,7 @@ function Sidebar({
           Go to site builder
         </Button>
       </form>
-      <ProgressMobileStepper />
+      {/* <ProgressMobileStepper /> */}
     </>
   );
 }
