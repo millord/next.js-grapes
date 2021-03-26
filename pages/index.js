@@ -157,11 +157,14 @@ const App = () => {
         </div>
       ) : (
         <>
-          <div className="editorContainer">
-            <EditorSiteBar editor={editor} />
-            <div id="example-editor" />
+          {/* <div className="editorContainer"> */}
+          <div>{/* <EditorSiteBar editor={editor} /> */}</div>
+
+          <div id="example-editor" />
+          <div>
             <HorizontalLabelPositionBelowStepper />
           </div>
+          {/* </div> */}
         </>
       )}
     </>
