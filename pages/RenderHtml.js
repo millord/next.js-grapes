@@ -175,11 +175,11 @@ export default function RenderHtml({
           id="icb6y"
           className="w3-content"
           style={{
-            backgroundImage: `url(${bgImage})`,
+            // backgroundImage: `url(${bgImage})`,
             backgroundColor: color.content,
 
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            // backgroundRepeat: "no-repeat",
+            // backgroundSize: "cover",
 
             // backgroundAttachment: "fixed",
           }}
