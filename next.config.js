@@ -1,5 +1,10 @@
-//next.config.js
-// const withImages = require("next-images");
-// const withCSS = require("@zeit/next-css");
+module.exports = {
+  webpackDevMiddleware: (config) => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300,
+    };
 
-// module.exports = withImages(withCSS());
+    return config;
+  },
+};
