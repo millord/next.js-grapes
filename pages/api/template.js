@@ -1,6 +1,8 @@
 // pages/api/data
 import nc from "next-connect";
 import cors from "cors";
+// var fs = require("fs");
+import fs from "fs";
 
 const handler = nc()
   // use connect based middleware
@@ -10,11 +12,11 @@ const handler = nc()
     // console.log("content", content);
     res.sendFile(path.resolve(__dirname, "template.html"));
   })
-  .post("/template", (req, res) => {
+  .post("/", (req, res) => {
     console.log("inside template function", req.body);
     // template =  JSON.stringify(req.body.result);
     template = req.body.htmlString;
-    var fs = require("fs");
+
     fs.writeFile("./test.html", template, function (err) {
       if (err) {
         // append failed
