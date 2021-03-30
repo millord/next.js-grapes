@@ -7,7 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import InputLabel from "@material-ui/core/InputLabel";
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "next/image";
-import Gallery from "./Gallery";
+// import Gallery from "./Gallery";
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 // import backgroundImage from "../assets/music.jpeg";
-import Image from "next/image";
+// import Image from "next/image";
 import EditorSiteBar from "./components/EditorSiteBar";
 
 const App = () => {
